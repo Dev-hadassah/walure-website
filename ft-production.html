@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                purple: ' #982A90',
+                lilac: '#F8F3FF',
+                pink: '#FA48E8',
+                lightpurple: '#AE2EA5',
+                angularpeach: '#FCE3E4',
+                reactBlue: '#7DE1FC',
+                blazorpurple: '#702AF7',
+                vueGreen: '#41B883',
+                cream: '#Fef4db',
+                navyBlue: '#2E3A59',
+                skyBlue: '#F4F7FB',
+                orange: '#FF9201',
+                heroBlue: '#2489FF',
+                yellow: ' #FFDE88',
+                blue: '#CDE4F2',
+                purple2: '#7F56D9',
+                gray6: '#F2F2F2',
+                gray5: '#E0E0E0',
+                lightPurple: '#FA48E8',
+                green: '#0F9403',
+                red: '#EC093F',
+                limeGreen: '#00A6A6',
+                yellow500: '#FFB905',
+                purple200: '#EAD4E9',
+                walureGreen: '#014B4B',
+                iposBlue: '#0779BF',
+                walureGray5: '#98A2B3',
+                text600: '#52525B',
+                text500: '#667085',
+                text400: ' #8B98B5',
+                text300: '#AABBDE',
+                text200: '#E0EAFF',
+                text100: '#F2F6FF',
+                text900: '#101828'
+              },
+              fontFamily: {
+              Montserrat: ['Montserrat', 'sans-serif'],
+              Inter: ['Inter', 'sans-serif'],
+              Jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+              },
+            }
+          },
+        }
+    </script>
+
+    <style>
+        .ipos-shadow {
+            box-shadow: 0px 5.52594px 18.41979px 0px rgba(49, 139, 204, 0.20);
+        }
+        .resumii-shadow {
+            box-shadow: 0px 5.52594px 16.57781px 0px rgba(200, 234, 234, 0.58);
+
+        }
+    </style>
+</head>
+<body>
+    <!-- hero section -->
+   <div class="">
+    <div class="grid content-center justify-items-center bg-gradient-to-r from-heroBlue via-orange to-heroBlue">
+        <h1 class="text-6xl font-black text-white pt-[129px] mb-5">Our Products</h1>
+        <p class="text-white font-medium text-2xl text-center w-[45%] pb-[291px]">Discover a range of cutting-edge products designed to address your business needs and propel your success.</p>
+    </div>
+    <!-- walure-products-images -->
+    <div class="flex absolute bottom-0">
+        <img src="images/walure-ipos-charts.png" alt="" class="">
+        <img src="images/walure-ipos.png" alt="" class="">
+        <img src="images/walure-dashboard.png" alt="" class="">
+    </div>
+     <!-- end of walure-products-images -->
+   </div>
+   <!-- end of hero section -->
+   <!-- walure-products -->
+   <div class="bg-blue pl-[173px] pr-[153px]">
+    <!-- ipos-product -->
+    <div class="grid grid-cols-2 gap-28 pt-[406px] pb-[199px]">
+        <div>
+            <img src="images/terminal 1.png" alt="">
+        </div>
+        <div>
+            <h3 class="text-iposBlue text-[32px] font-bold leading-7 tracking-[2.56px] mb-7">IPOS</h3>
+            <p class="w-[68%] text-text500 text-xs font-medium leading-8 mb-[61px]">IPOS by Smartware is a retail business solution equipped  with tools such as point of sale(POS), inventory management,
+            sales analytics, and customer relationship management (CRM) which enables  SMEs and Large- Scale businesses
+            run their business seemlessly.
+            </p>
+            <p class="text-xs font-bold tracking-[2.38px] text-text500 bg-text200 py-2 px-5 items-center rounded-3xl inline-flex mb-5">Features</p>
+            <!-- accordion -->
+           <div id="accordion-collapse" data-accordion="collapse" class="bg-white mb-5 rounded-md w-[97%] px-3 py-5 ipos-shadow">
+            <div class="border-b-[1px] border-gray5">
+                <p id="accordion-collapse-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-text900 text-base mb-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                    <span>Unified Wallet Account</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M11.6191 7.54352V14.9114M7.93512 11.2275H15.303M20.829 11.2275C20.829 16.314 16.7056 20.4374 11.6191 20.4374C6.53259 20.4374 2.40918 16.314 2.40918 11.2275C2.40918 6.14099 6.53259 2.01758 11.6191 2.01758C16.7056 2.01758 20.829 6.14099 20.829 11.2275Z" stroke="#667085" stroke-width="1.84198" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                </p>
+                  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1" class="">
+                    <div class="">
+                        <p class="mb-8 text-gray-500">Easily manage your suppliers, orders, and stock levels in one place.</p>
+                        <!-- <p class="text-gray-500">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p> -->
+                  </div>
+                  </div>
+            </div>
+            <div class="border-b-[1px] border-gray5">
+                <p id="accordion-collapse-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-text900 text-base mb-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                    <span>Seamless Checkout</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M11.6191 7.54352V14.9114M7.93512 11.2275H15.303M20.829 11.2275C20.829 16.314 16.7056 20.4374 11.6191 20.4374C6.53259 20.4374 2.40918 16.314 2.40918 11.2275C2.40918 6.14099 6.53259 2.01758 11.6191 2.01758C16.7056 2.01758 20.829 6.14099 20.829 11.2275Z" stroke="#667085" stroke-width="1.84198" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </p>
+                  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2" class="">
+                    <div class="">
+                        <p class="mb-8 text-gray-500"></p>
+                        <!-- <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p> -->
+                    </div>
+                  </div>
+            </div>    
+            <div class="">
+                <p id="accordion-collapse-heading-3">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-text900 text-base mb-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                    <span>Purchase Order</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M11.6191 7.54352V14.9114M7.93512 11.2275H15.303M20.829 11.2275C20.829 16.314 16.7056 20.4374 11.6191 20.4374C6.53259 20.4374 2.40918 16.314 2.40918 11.2275C2.40918 6.14099 6.53259 2.01758 11.6191 2.01758C16.7056 2.01758 20.829 6.14099 20.829 11.2275Z" stroke="#667085" stroke-width="1.84198" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                </p>
+                <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3" class="">
+                <div class="p-5 border-gray-200 dark:border-gray-700">
+                    <p class="mb-8 text-gray-500"></p>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- end of accordion -->
+             <!-- learn-more -->
+            <div class="flex justify-end">
+                <a href="#" class="flex items-center gap-2 text-iposBlue font-bold leading-[30px]">Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                    <path d="M3.64941 11.9999L20.2272 11.9999" stroke="#0779BF" stroke-width="1.84198" stroke-linecap="round"/>
+                    <path d="M14.7012 17.5259L20.2271 11.9999L14.7012 6.474" stroke="#0779BF" stroke-width="1.84198" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+            <!-- end of learn-more -->
+        </div>
+    </div>
+    <!-- end of ipos-product -->
+   </div>
+    <!-- rezumii-product -->
+    <div class="grid grid-cols-2 gap-[138px] bg-white px-[140px] py-[170px]">
+        <div>
+            <h4 class="text-xl font-bold leading-7 tracking-[2.15px] text-walureGreen mb-8">REZUMII</h4>
+            <h2 class="text-text500 font-bold leading-[52px] text-3xl mb-8">Features</h2>
+           <!-- accordion -->
+           <div id="accordion-collapse" data-accordion="collapse" class="bg-white mb-5 rounded-md w-[97%] px-3 py-5 resumii-shadow">
+            <div class="border-b-[1px] border-gray5">
+                <p id="accordion-collapse-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-text900 text-base mb-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                    <span>Recruitment</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M11.6191 7.54352V14.9114M7.93512 11.2275H15.303M20.829 11.2275C20.829 16.314 16.7056 20.4374 11.6191 20.4374C6.53259 20.4374 2.40918 16.314 2.40918 11.2275C2.40918 6.14099 6.53259 2.01758 11.6191 2.01758C16.7056 2.01758 20.829 6.14099 20.829 11.2275Z" stroke="#667085" stroke-width="1.84198" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                </p>
+                  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1" class="">
+                    <div class="">
+                        <p class="mb-8 text-gray-500">Easy hiring. Personalized job recommendations, and seamless applicant management.</p>
+                        <!-- <p class="text-gray-500">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p> -->
+                  </div>
+                  </div>
+            </div>
+            <div class="border-b-[1px] border-gray5">
+                <p id="accordion-collapse-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-text900 text-base mb-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                    <span>Talent management</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M11.6191 7.54352V14.9114M7.93512 11.2275H15.303M20.829 11.2275C20.829 16.314 16.7056 20.4374 11.6191 20.4374C6.53259 20.4374 2.40918 16.314 2.40918 11.2275C2.40918 6.14099 6.53259 2.01758 11.6191 2.01758C16.7056 2.01758 20.829 6.14099 20.829 11.2275Z" stroke="#667085" stroke-width="1.84198" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </p>
+                  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2" class="">
+                    <div class="">
+                        <p class="mb-8 text-gray-500"></p>
+                        <!-- <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p> -->
+                    </div>
+                  </div>
+            </div>    
+            <div class="">
+                <p id="accordion-collapse-heading-3">
+                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-text900 text-base mb-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                    <span>Payroll magemement</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M11.6191 7.54352V14.9114M7.93512 11.2275H15.303M20.829 11.2275C20.829 16.314 16.7056 20.4374 11.6191 20.4374C6.53259 20.4374 2.40918 16.314 2.40918 11.2275C2.40918 6.14099 6.53259 2.01758 11.6191 2.01758C16.7056 2.01758 20.829 6.14099 20.829 11.2275Z" stroke="#667085" stroke-width="1.84198" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                </p>
+                <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3" class="">
+                <div class="p-5 border-gray-200 dark:border-gray-700">
+                    <p class="mb-8 text-gray-500"></p>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- end of accordion -->
+            <!-- learn-more -->
+            <div class="flex justify-end">
+                <a href="#" class="flex items-center gap-2 text-walureGreen font-bold leading-[30px]">Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <path d="M3.12207 10.7971H18.2534" stroke="#014B4B" stroke-width="1.68126" stroke-linecap="round"/>
+                        <path d="M13.21 15.8418L18.2537 10.798L13.21 5.75422" stroke="#014B4B" stroke-width="1.68126" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+            <!-- end of learn-more -->
+        </div>
+        <div>
+            <img src="images/Frame 427319326.png" alt="">
+        </div>
+    </div>
+    <!-- end of rezumii-product -->
+    <!-- smart-learn-product -->
+    <div class="bg-black">
+        <div class="grid justify-items-center pr-[260px] pl-[320px]" style="background-image: url(images/walure-backdrop.svg)">
+            <h3 class="pt-20 text-text200 text-2xl font-bold leading-7 tracking-[2.358px] mb-9">SMART LEARN</h3>
+            <p class="w-[63%] text-center text-white font-normal leading-[30.15px] mb-10">A user-friendly platform where organizations, content managers, tutors, and students collaborate, learn, and grow together.
+               Join our fast-growing communities and start achieving your learning goals today.
+            </p>
+            <button class="text-purple font-medium leading-6 tracking-[0.387px] inline-flex py-3 px-10 bg-white rounded-md mb-[134px]">Learn more</button>
+            <img src="images/Frame 427319324 (2).png" alt="" class="pb-20">
+        </div>
+    </div>
+    <!-- end of smart-learn-product -->
+    <!-- customer-review-section -->
+    <div class="bg-gray-100">
+        <h2 class="pt-[139px] text-center text-4xl text-text500 font-bold leading-[53px] mb-[220px]">What our clients are saying</h2>
+        <div class="grid grid-cols-3 gap-11 pb-[176px] px-[212px]">
+            <!-- Temitayo Alex Review -->
+            <div class="p-7 bg-white shadow-xl rounded-[10px]">
+                <p class="text-black mb-20 w-full">IPOS makes it easy to track sales and manage inventory, saving me time and money. 
+                    I highly recommend IPOS for anyone looking for an efficient and reliable way to manage their business operations.
+                </p>
+                <div class="flex">
+                    <div>
+                        <img src="images/walure-afro-girl-avatar.png" alt="">
+                    </div>
+                    <div>
+                        <p class="font-bold leading-[26px] text-black">Temitayo Alex</p>
+                        <p class="text-text600 leading-[20px]">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+             <!--end of Temitayo Alex Review -->
+            <!-- Felix John Review -->
+            <div class="p-7 bg-white shadow-xl rounded-[10px]">
+                <p class="text-black mb-20 w-full">IPOS has helped me to manage my sales, purchase orders, and inventory operations across multiple stores
+                        and I'm extremely impressed with the results.
+                </p>
+                <div class="flex">
+                    <div>
+                        <img src="images/walure-afro-girl-avatar.png" alt="">
+                    </div>
+                    <div>
+                        <p class="font-bold leading-[26px] text-black">Felix John</p>
+                        <p class="text-text600 leading-[20px]">Business Developer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of Felix John Review -->
+            <!-- Kennedy James -->
+            <div class="p-7 bg-white shadow-xl rounded-[10px]">
+                <p class="text-black mb-20 w-full">IPOS has made it incredibly easy to keep track of my operations in one place,
+                    and I can easily access and manage all of my data from any device.
+                </p>
+                <div class="flex">
+                    <div>
+                        <img src="images/walure-afro-girl-avatar.png" alt="">
+                    </div>
+                    <div>
+                        <p class="font-bold leading-[26px] text-black">Kennedy James</p>
+                        <p class="text-text600 leading-[20px]">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of Kennedy James -->
+        </div>
+    </div>
+     <!-- end of customer-review-section -->
+    <!-- call-to-action -->
+    <div class="grid justify-items-center pt-[60px] pb-20 px-[311px] rounded-3xl mt-[89px] mx-[139px] mb-[341px]" style="background-image: url(images/walure-multicolor-bg.png)">
+        <p class="w-[63%] text-text100 text-center text-4xl font-black mb-12">Want to know more about our product</p>
+        <button class="justify-center items-center py-3 px-10 bg-white text-purple rounded-md">Contact us</button>
+    </div>
+    <!--end of call-to-action -->
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex border-b xl:w-1/2 border-gray-200 mb-4 mx-auto px-5 pt-10">
+        <ul class="flex flex-wrap justify-center mx-auto" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+            <li class="mr-2" role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-tlg py-4 px-4 text-sm font-medium text-center border-transparent border-b dark:text-gray-400 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b" id="order-tab" data-tabs-target="#order" type="button" role="tab" aria-controls="order" aria-selected="false">Order</button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b" id="download-tab" data-tabs-target="#download" type="button" role="tab" aria-controls="download" aria-selected="false">Download</button>
+            </li>
+            <li role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b" id="address-tab" data-tabs-target="#address" type="button" role="tab" aria-controls="address" aria-selected="false">Address</button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b" id="account-tab" data-tabs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="true">Account details</button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b" id="logout-tab" data-tabs-target="#logout" type="button" role="tab" aria-controls="logout" aria-selected="false">Logout</button>
+            </li>
+        </ul>
+    </div>
+    <div id="myTabContent" class="mx-5 lg:mx-[334px]">
+        <div class="p-4" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <main class="mb-10 lg:mb-20">
+                <p class="mb-5"><strong>Hello Fatima</strong> | not Fatima? <a href="#" class="text-lime-600">Log out</a></p>
+                <p>From your account dashboard you can view your
+
+            <li role="presentation">
+                <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b" id="address-tab" data-tabs-target="#address" type="button" role="tab" aria-controls="address" aria-selected="false">Address</button>
+            </li>
+                    <a href="#" class="text-lime-600">recent orders</a>, manage your <a href="#" class="text-lime-600">shipping and billing addresses</a>, and edit your <a href="#" class="text-lime-600">password and account details</a>.</p>
+            </main>
+
+            <!-- <div class="flex-col lg:flex-row space-y-4 justify-between items-center acatBg py-[90px] px-[58px] mb-20 lg:mx-[-91px]">
+                <div class="text-white font-black text-3xl">
+                    <p class="font-black text-xl lg:text-5xl lg:leading-[43px]">ANOTHER CATEGORY</p>
+                    <p class="font-black text-xl lg:text-5xl lg:leading-[43px]">ADVERT HERE</p>
+                </div>
+                <div>
+                    <div class="justify-center items-center ">
+                        <button class="bg-white text-lime-900 text-sm lg:text-lg lg:leading-5 tracking-[2.5px] font-bold py-4 px-6">SHOP NOW</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="p-4 hidden" id="order" role="tabpanel" aria-labelledby="order-tab">
+            <main class="lg:mb-40 mb-60">
+                <div class="flex justify-between w-full lg:gap-96 border-t-2 border-orange-600 bg-gray-200 p-2">
+                    <p class="">No order has been made yet.</p>
+                    <p class="text-lime-600">BROWSE PRODUCT</p>
+                </div>
+            </main>
+        </div>
+        <div class="p-4 rounded-lg hidden overflow-x-auto" id="download" role="tabpanel" aria-labelledby="download-tab">
+            <main class="lg:mb-32 mb-16">
+                <table class="">
+                    <thead class="border-b-2 border-black">
+                        <tr>
+                            <th class="py-5 pr-[60px] text-sm">ORDER NUMBER</th>
+                            <th class="py-5 px-5 lg:px-[30px] text-sm">DATE</th>
+                            <th class="py-5 px-5 lg:px-[30px] text-sm">STATUS</th>
+                            <th class="py-5 px-5 lg:px-[30px] text-sm">TOTAL</th>
+                            <th class="py-5 px-5 lg:px-[30px] text-sm">ACTIONS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-b-2">
+                            <td class="text-gray-500 py-5 pr-[70px] text-sm">7643980998990</td>
+                            <td class="text-gray-500 py-5 px-5 lg:px-[30px] text-sm">February 8, 2023</td>
+                            <td class="text-gray-500 py-5 px-5 lg:px-[30px] text-sm">Delivered</td>
+                            <td class="text-gray-800 py-5 px-5 lg:px-[30px] text-sm">$ 105</td>
+                            <td class="text-lime-600 font-bold py-5 px-5 lg:px-[30px] text-sm">View Order|Download</td>
+                        </tr>
+
+                        <tr class="border-b-2">
+                            <td class="text-gray-500 py-5 pr-[70px] text-sm">943980998990</td>
+                            <td class="text-gray-500 py-5 px-5 lg:px-[30px] text-sm">February 8, 2023</td>
+                            <td class="text-gray-500 py-5 px-5 lg:px-[30px] text-sm">Processing</td>
+                            <td class="text-gray-800 py-5 px-5 lg:px-[30px] text-sm">$ 100</td>
+                            <td class="text-lime-600 font-bold py-5 px-5 lg:px-[30px] text-sm">View Order|Download</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-gray-500 py-5 pr-[70px] text-sm">879980998990</td>
+                            <td class="text-gray-500 py-5 px-5 lg:px-[30px] text-sm">February 8, 2023</td>
+                            <td class="text-gray-500 py-5 px-5 lg:px-[30px] text-sm">Delivered</td>
+                            <td class="text-gray-800 py-5 px-5 lg:px-[30px] text-sm">$ 65</td>
+                            <td class="text-lime-600 font-bold py-5 px-5 lg:px-[30px] text-sm">View Order|Download</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <div class="p-4 rounded-lg hidden" id="address" role="tabpanel" aria-labelledby="address-tab">
+            <main class="lg:mb-40 mb-60 ">
+                <p class="lg:mb-5 mb-8">The following addresses will be used on the checkout page by default.</p>
+                <div class="grid lg:flex justify-between gap-10">
+                    <div class="w-full">
+                        <p class="mb-5 font-semibold">Billing Address</p>
+                        <p id="addBilling" class="text-lime-600 font-bold">ADD</p>
+                        <p>You have not set up this type of address yet.</p>
+                    </div>
+                    <div class="w-full">
+                        <p class="mb-5 font-semibold">Shipping Address</p>
+                        <p id="addShipping" class="text-lime-600 font-bold">ADD</p>
+                        <p>You have not set up this type of address yet.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="p-4 rounded-lg hidden" id="account" role="tabpanel" aria-labelledby="account-tab">
+            <main class="2xl:w-1/2 mx-auto mt-5 md:mt-10 lg:mt-16 xl:mt-20 2xl:mt-[88px]">
+                <h1 class="font-bold text-center mb-5 text-lg lg:text-[33px]">Account Details</h1>
+                <div class="relative text-left grid grid-cols-1 lg:grid-cols-2 gap-x-5">
+                    <div class="lg:mt-16">
+                        <label for="name" class="text-gray-800">First name*</label>
+                        <input type="text" class="w-full border-b-2 border-gray-200 mb-10">
+                        <label for="name" class="text-gray-800">Last name*</label>
+                        <input type="text" class="w-full border-b-2 border-gray-200 mb-10">
+                        <label for="name" class="text-gray-800">Display name*</label>
+                        <input type="text" class="w-full border-b-2 border-gray-200 mb-1">
+                        <p class="text-gray-500 text-sm mb-3">This will be how your name will be displayed in the account section and in reviews.</p>
+                        <label for="email" class="text-gray-800">Email address*</label>
+                        <input type="email" class="mb-12 w-full border-b-2 border-gray-200">
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-base mb-3">Password change</h5>
+                        <label for="password" class="text-gray-800">Current password (leave blank to leave unchanged)</label>
+                        <input type="password" class="w-full border-b-2 border-gray-200 mb-10">
+                        <label for="password" class="text-gray-800">New password (leave blank to leave unchanged)</label>
+                        <input type="password" class="w-full border-b-2 border-gray-200 mb-10">
+                        <label for="password" class="text-gray-800">Confirm new password</label>
+                        <input type="password" class="w-full border-b-2 border-gray-200 mb-10">
+                    </div>
+                <button class="bg-catsorange lg:col-span-2 text-white w-full mb-24 py-5 text-lg lg:text-2xl font-bold lg:leading-[30px] px-10">SAVE CHANGES</button>
+            </main>
+        </div>
+        <div class="p-4 rounded-lg hidden" id="logout" role="tabpanel" aria-labelledby="logout-tab">
+
+        </div>
+    </div>
+
+    <div id="adSpace" class="grid lg:flex space-y-4 justify-between mx-auto items-center w-3/4 acatBg py-10 lg:py-[90px] px-9 lg:px-[58px] mb-20 mx-5 lg:mx-auto">
+        <div class="text-white font-black text-3xl">
+            <p class="font-black text-xl lg:text-5xl lg:leading-[43px]">ANOTHER CATEGORY</p>
+            <p class="font-black text-xl lg:text-5xl lg:leading-[43px]">ADVERT HERE</p>
+        </div>
+        <div>
+            <div class="justify-center items-center ">
+                <a href="../shoplanding.html" class="bg-white text-lime-900 text-sm lg:text-lg lg:leading-5 tracking-[2.5px] font-bold py-4 px-6">
+                    SHOP NOW
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+
+        <script>
+            const accountTab = document.getElementById("account-tab")
+            const addressTab = document.getElementById("address-tab")
+            const orderTab = document.getElementById("order-tab")
+            const downloadTab = document.getElementById("download-tab")
+            const dashboardTab = document.getElementById("dashboard-tab")
+            const logoutTab = document.getElementById("logout-tab")
+            const adSpace = document.getElementById("adSpace");
+
+            accountTab.addEventListener("click", () => adSpace.classList.add('hidden'));
+            orderTab.addEventListener("click", () => adSpace.classList.remove('hidden'));
+            addressTab.addEventListener("click", () => adSpace.classList.add('hidden'));
+            dashboardTab.addEventListener("click", () => adSpace.classList.remove('hidden'));
+            downloadTab.addEventListener("click", () => adSpace.classList.remove('hidden'));
+            logoutTab.addEventListener("click", () => adSpace.classList.remove('hidden'));
+        </script>
+
+</body>
+</html>
