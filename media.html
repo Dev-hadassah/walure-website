@@ -4,56 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media</title>
+    <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <style>
+        .bg-production {
+            background-image: url(images/DSC01569\ 2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bg-rentals {
+            background-image: url(images/DSC01099\ 1\ \(1\).png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bg-billboard {
+            background-image: url(images/large-billboard-front-building-roadside\ 1.png);
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+    </style>
+     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                purple: ' #982A90',
-                lilac: '#F8F3FF',
-                pink: '#FA48E8',
-                lightpurple: '#AE2EA5',
-                angularpeach: '#FCE3E4',
-                reactBlue: '#7DE1FC',
-                blazorpurple: '#702AF7',
-                vueGreen: '#41B883',
-                cream: '#Fef4db',
-                navyBlue: '#2E3A59',
-                skyBlue: '#F4F7FB',
-                orange: '#FF9201',
-                heroBlue: '#2489FF',
-                gradientBlue: '#1C72B1',
-                yellow: ' #FFDE88',
-                blue: '#CDE4F2',
-                purple2: '#7F56D9',
-                gray6: '#F2F2F2',
-                gray5: '#E0E0E0',
-                lightPurple: '#FA48E8',
-                green: '#0F9403',
-                red: '#EC093F',
-                limeGreen: '#00A6A6',
-                yellow500: '#FFB905',
-                purple200: '#EAD4E9',
-                walureGreen: '#014B4B',
-                iposBlue: '#0779BF',
-                walureGray5: '#98A2B3',
-                text600: '#52525B',
-                text500: '#667085',
-                text400: ' #8B98B5',
-                text300: '#AABBDE',
-                text200: '#E0EAFF',
-                text100: '#F2F6FF',
-                text900: '#101828'
-              },
-              fontFamily: {
-              Montserrat: ['Montserrat', 'sans-serif'],
-              Inter: ['Inter', 'sans-serif'],
-              Jakarta: ['Plus Jakarta Sans', 'sans-serif'],
-              },
-            }
-          },
+            theme: {
+                extend: {
+                    colors: {
+                        'walure-green': withOpacity('--color-walure-green'),
+                        'walure-lime-green': withOpacity('--color-walure-lime-green'),
+                        'walure-dark-green': withOpacity('--color-walure-dark-green'),
+                        'walure-purple': withOpacity('--color-walure-purple'),
+                        'walure-pink-100': withOpacity('--color-walure-pink-100'),
+                        'walure-pink-200': withOpacity('--color-walure-pink-200'),
+                        'walure-pink-300': withOpacity('--color-walure-pink-300'),
+                        'walure-pink-400': withOpacity('--color-walure-pink-400'),
+                        'walure-pink-500': withOpacity('--color-walure-pink-500'),
+                        'walure-yellow-100': withOpacity('--color-walure-yellow-100'),
+                        'walure-yellow-200': withOpacity('--color-walure-yellow-200'),
+                        'walure-blue-100': withOpacity('--color-walure-blue-100'),
+                        'walure-blue-200': withOpacity('--color-walure-blue-200'),
+                        'walure-blue-700': withOpacity('--color-walure-blue-700'),
+                        'walure-red': withOpacity('--color-walure-red'),
+                        'walure-shade-100': withOpacity('--color-walure-shade-100'),
+                        'walure-shade-200': withOpacity('--color-walure-shade-200'),
+                        'walure-shade-300': withOpacity('--color-walure-shade-300'),
+                        'walure-shade-400': withOpacity('--color-walure-shade-400'),
+                        'walure-shade-500': withOpacity('--color-walure-shade-500'),
+                        'walure-shade-600': withOpacity('--color-walure-shade-600'),
+                        'walure-shade-700': withOpacity('--color-walure-shade-700'),
+                        'walure-shade-800': withOpacity('--color-walure-shade-800'),
+                        'walure-shade-900': withOpacity('--color-walure-shade-900'),
+                        'walure-dark-green': withOpacity('--color-walure-dark-green'),
+                        'walure-job-blue': withOpacity('--color-walure-job-blue'),
+                        'walure-job-purple': withOpacity('--color-walure-job-purple'),
+                        'walure-black-100': withOpacity('--color-walure-black-100'),
+                    'walure-gray-500': withOpacity('--color-walure-gray-500'),
+                    },
+                    fontFamily: {
+                        Montserrat: ['Montserrat', 'sans-serif'],
+                        Inter: ['Inter', 'sans-serif'],
+                        Jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    keyframes: {
+                        hover: {
+                            '0%': { transform: 'translateY(0)' },
+                            '30%': { transform: 'translateY(-20px)' },
+                            '60%': { transform: 'translateY(0)' },
+                            '90%': { transform: 'translateY(20px)' },
+                        },
+                        hoverIcon: {
+                            '0%': { transform: 'translateY(0)' },
+                            '30%': { transform: 'translateY(-2px)' },
+                            '60%': { transform: 'translateY(0)' },
+                            '90%': { transform: 'translateY(2px)' },
+                        },
+                        wave: {
+                            '0%': { transform: 'rotate(0.0deg)' },
+                            '10%': { transform: 'rotate(14deg)' },
+                            '20%': { transform: 'rotate(-8deg)' },
+                            '30%': { transform: 'rotate(14deg)' },
+                            '40%': { transform: 'rotate(-4deg)' },
+                            '50%': { transform: 'rotate(10.0deg)' },
+                            '60%': { transform: 'rotate(0.0deg)' },
+                            '100%': { transform: 'rotate(0.0deg)' },
+                        },
+                        flyIn: {
+                            '0%': { transform: 'translateY(40px)' },
+                            '50%': { transform: 'translateY(0)' },
+                        },
+                        flyOut: {
+                            '0%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    },
+                    animation: {
+                        hover: 'hover 1.5s linear infinite',
+                        hoverIcon: 'hoverIcon 1s linear infinite',
+                        wave: 'wave 2s linear infinite',
+                        flyIn: 'flyIn 0.1s linear',
+                        flyOut: 'flyOut 0.1s linear',
+                    }
+                },
+            },
         }
     </script>
 </head>
@@ -73,20 +124,23 @@
         </div>
     </div> -->
     <!-- end of hero-section -->
-    <!-- services -->
+    <!-- services --> #1C72B1
     <div class="mt-[106px] mx-[151px]">
-        <p class="px-10 py-2 mb-8 border-2 border-t-purple border-b-gradientBlue border-x-gradientBlue inline-block text-gray-500 text-xl font-semibold rounded-3xl">Services</p>
-        <div class="flex justify-between rounded-2xl mb-8" style="background-image: url(images/DSC01569\ 2.png);">
-            <h2 class="text-white text-5xl font-black tracking-[2.4px] p-14 py-28">PRODUCTION</h2>
-            <button class="border-2 border-white text-white text-xl font-semibold tracking-[0.569px] px-[62px] py-4 my-28 mr-10 rounded-xl">View more</button>
+        <p class="px-10 py-2 mb-8 border-2 border-bg-gradient-to-b from-walure-pink-300 to-gradientBlue inline-block text-walure-shade-600 text-xl font-semibold rounded-3xl">Services</p>
+        <div class="flex relative justify-between rounded-2xl mb-8 bg-production">
+            <div class="bg-black absolute w-full h-full object-cover bg-opacity-50 top-0 left-0 rounded-3xl"></div>
+            <h2 class="relative text-white text-5xl font-black tracking-[2.4px] p-14 py-28">PRODUCTION</h2>
+            <button class="relative border-2 border-white text-white text-xl font-semibold tracking-[0.569px] px-[62px] py-4 my-28 mr-10 rounded-xl">View more</button>
         </div>
-        <div class="flex justify-between rounded-2xl mb-8" style="background-image: url(images/DSC01099\ 1\ \(1\).png);">
-            <h2 class="text-white text-5xl font-black tracking-[2.4px] p-14 py-28">RENTALS</h2>
-            <button class="border-2 border-white text-white text-xl font-semibold tracking-[0.569px] px-[62px] py-4 my-28 mr-10 rounded-xl">View more</button>
+        <div class="flex relative justify-between rounded-2xl mb-8 bg-rentals">
+            <div class="bg-black absolute w-full h-full object-cover bg-opacity-50 top-0 left-0 rounded-3xl"></div>
+            <h2 class="relative text-white text-5xl font-black tracking-[2.4px] p-14 py-28">RENTALS</h2>
+            <button class="relative border-2 border-white text-white text-xl font-semibold tracking-[0.569px] px-[62px] py-4 my-28 mr-10 rounded-xl">View more</button>
         </div>
-        <div class="flex justify-between rounded-2xl mb-[106px]" style="background-image: url(images/large-billboard-front-building-roadside\ 1.png);">
-            <h2 class="text-white text-5xl font-black tracking-[2.4px] p-14 py-28">BILLBOARDS</h2>
-            <button class="border-2 border-white text-white text-xl font-semibold tracking-[0.569px] px-[62px] py-4 my-28 mr-10 rounded-xl">View more</button>
+        <div class="flex relative justify-between rounded-2xl mb-[106px] bg-billboard">
+            <div class="bg-black absolute w-full h-full object-cover bg-opacity-50 top-0 left-0 rounded-3xl"></div>
+            <h2 class="relative text-white text-5xl font-black tracking-[2.4px] p-14 py-28">BILLBOARDS</h2>
+            <button class="relative border-2 border-white text-white text-xl font-semibold tracking-[0.569px] px-[62px] py-4 my-28 mr-10 rounded-xl">View more</button>
         </div>
     </div>
     <!-- end of services -->
@@ -94,22 +148,22 @@
    <div class="bg-black" style="background-image: url(images/walure-backdrop.svg);">
     <div class="grid justify-items-center">
         <p class="mt-10 text-white border-2 border-white px-10 py-2 text-xl font-semibold rounded-3xl inline-block mb-5">Pricing</p>
-        <p class="text-text200 text-2xl font-medium mb-[52px]">We give you the best equipments rent rates</p>
+        <p class="text-blue-50 text-2xl font-medium mb-[52px]">We give you the best equipments rent rates</p>
     </div>
         <div class="mx-[150px] pb-[141px]">
             <div class="border-b-4 border-white mb-10">
                 <ul class="flex justify-between mb-3" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block text-gray-500 hover:text-white active:text-white hover:border-purple py4 px-4 textsm font-medium" id="audiogadget-tab" data-tabs-target="#audiogadget" type="button" role="tab" aria-controls="audiogadget" aria-selected="true">Audio Gadget</button>
+                        <button class="inline-block text-walure-shade-600 hover:text-white hover:border-walure-pink-300 px-4 font-medium" id="audiogadget-tab" data-tabs-target="#audiogadget" type="button" role="tab" aria-controls="audiogadget" aria-selected="true">Audio Gadget</button>
                     </li>
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block text-gray-500 hover:text-white hover:border-purple py4 px-4 textsm font-medium" id="cameragadget-tab" data-tabs-target="#cameragadget" type="button" role="tab" aria-controls="cameragadget" aria-selected="false">Camera Gadget</button>
+                        <button class="inline-block text-walure-shade-600 hover:text-white hover:border-walure-pink-300 px-4 font-medium" id="cameragadget-tab" data-tabs-target="#cameragadget" type="button" role="tab" aria-controls="cameragadget" aria-selected="false">Camera Gadget</button>
                     </li>
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block text-gray-500 hover:text-white hover:border-purple py4 px-4 textsm font-medium" id="studiospace-tab" data-tabs-target="#studiospace" type="button" role="tab" aria-controls="studiospace" aria-selected="false">Studio Space</button>
+                        <button class="inline-block text-walure-shade-600 hover:text-white hover:border-walure-pink-300 px-4 font-medium" id="studiospace-tab" data-tabs-target="#studiospace" type="button" role="tab" aria-controls="studiospace" aria-selected="false">Studio Space</button>
                     </li>
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block text-gray-500 hover:text-white hover:border-purple py4 px-4 textsm font-medium" id="ledBillboard-tab" data-tabs-target="#ledBillboard" type="button" role="tab" aria-controls="ledBillboard" aria-selected="false">LED Billboard</button>
+                        <button class="inline-block text-walure-shade-600 hover:text-white hover:border-walure-pink-300 px-4 font-medium" id="ledBillboard-tab" data-tabs-target="#ledBillboard" type="button" role="tab" aria-controls="ledBillboard" aria-selected="false">LED Billboard</button>
                     </li>
                 </ul>
             </div>
@@ -119,30 +173,30 @@
                     <table class="w-full">
                         <thead>
                             <tr class="bg-white">
-                                <th class="text-gray-500 py-4">Equipment</th>
-                                <th class="text-gray-500 py-4">Rate</th>
+                                <th class="text-walure-shade-600 py-4">Equipment</th>
+                                <th class="text-walure-shade-600 py-4">Rate</th>
                             </tr>
                         </thead>
                         <tbody class="">
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Lapel Microphone</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 5000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Lapel Microphone</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 5000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Handheld Mircophone</td>
-                                <td class="text-gray-500 text-center py-4">N7,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Handheld Mircophone</td>
+                                <td class="text-walure-shade-600 text-center py-4">N7,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Zoom</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 10,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Zoom</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 10,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Boom Microphone</td>
-                                <td class="text-gray-500 text-center py-4">N 10,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Boom Microphone</td>
+                                <td class="text-walure-shade-600 text-center py-4">N 10,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">SM7B Microphone</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 10,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">SM7B Microphone</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 10,000.00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -153,46 +207,46 @@
                     <table class="w-full">
                         <thead>
                             <tr class="bg-white">
-                                <th class="text-gray-500 py-4">Equipment</th>
-                                <th class="text-gray-500 py-4">Rate</th>
+                                <th class="text-walure-shade-600 py-4">Equipment</th>
+                                <th class="text-walure-shade-600 py-4">Rate</th>
                             </tr>
                         </thead>
                         <tbody class="">
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Sony a7riv with 1 lens 18-105mm</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 20,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Sony a7riv with 1 lens 18-105mm</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 20,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Sony a7riv with 2 lenses+50mm</td>
-                                <td class="text-gray-500 text-center py-4">N25,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Sony a7riv with 2 lenses+50mm</td>
+                                <td class="text-walure-shade-600 text-center py-4">N25,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Sony z150</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 15,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Sony z150</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 15,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Canon Mark IV with 1 lens 50mm</td>
-                                <td class="text-gray-500 text-center py-4">N 15,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Canon Mark IV with 1 lens 50mm</td>
+                                <td class="text-walure-shade-600 text-center py-4">N 15,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Canon Mark IV with 1 lens 50mm</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 15,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Canon Mark IV with 1 lens 50mm</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 15,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4 border">Sony lenses</td>
-                                <td class="text-gray-500 text-center py-4 border">N 20,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border">Sony lenses</td>
+                                <td class="text-walure-shade-600 text-center py-4 border">N 20,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Canon lenses</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 7,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Canon lenses</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 7,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4 border">Drone</td>
-                                <td class="text-gray-500 text-center py-4 border">N 30,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border">Drone</td>
+                                <td class="text-walure-shade-600 text-center py-4 border">N 30,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Drone with smart controller</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 45,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Drone with smart controller</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 45,000.00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -203,26 +257,26 @@
                     <table class="w-full">
                         <thead>
                             <tr class="bg-white">
-                                <th class="text-gray-500 py-4">Period</th>
-                                <th class="text-gray-500 py-4">Rate</th>
+                                <th class="text-walure-shade-600 py-4">Period</th>
+                                <th class="text-walure-shade-600 py-4">Rate</th>
                             </tr>
                         </thead>
                         <tbody class="">
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Per-Hour</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 20,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Per-Hour</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 20,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">4 Hours</td>
-                                <td class="text-gray-500 text-center py-4">N 70,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">4 Hours</td>
+                                <td class="text-walure-shade-600 text-center py-4">N 70,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">6 Hours</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 100,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">6 Hours</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 100,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Weekend Per-Hour</td>
-                                <td class="text-gray-500 text-center py-4">N 40,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Weekend Per-Hour</td>
+                                <td class="text-walure-shade-600 text-center py-4">N 40,000.00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -233,30 +287,30 @@
                     <table class="w-full">
                         <thead>
                             <tr class="bg-white">
-                                <th class="text-gray-500 py-4">Period</th>
-                                <th class="text-gray-500 py-4">Rate</th>
+                                <th class="text-walure-shade-600 py-4">Period</th>
+                                <th class="text-walure-shade-600 py-4">Rate</th>
                             </tr>
                         </thead>
                         <tbody class="">
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Impression</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 250,000.00 (Minimum 40 per day)</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Impression</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 250,000.00 (Minimum 40 per day)</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Daily</td>
-                                <td class="text-gray-500 text-center py-4">N 90,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Daily</td>
+                                <td class="text-walure-shade-600 text-center py-4">N 90,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Weekly</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 550,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Weekly</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 550,000.00</td>
                             </tr>
                             <tr class="bg-white">
-                                <td class="text-gray-500 text-center py-4">Monthly</td>
-                                <td class="text-gray-500 text-center py-4">N 2,000,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4">Monthly</td>
+                                <td class="text-walure-shade-600 text-center py-4">N 2,000,000.00</td>
                             </tr>
                             <tr>
-                                <td class="text-gray-500 text-center py-4 border border-white">Monthly</td>
-                                <td class="text-gray-500 text-center py-4 border border-white">N 22,000,000.00</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">Monthly</td>
+                                <td class="text-walure-shade-600 text-center py-4 border border-white">N 22,000,000.00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -268,9 +322,9 @@
     <!-- end of pricing -->
     <!-- call-to-action -->
     <div class="grid justify-items-center pt-[60px] pb-20 px-[311px] rounded-3xl mt-[89px] mx-[139px] mb-[341px]" style="background-image: url(images/walure-multicolor-bg.png)">
-        <p class="w-[83%] text-text100 text-center text-2xl font-semibold tracking-wide mb-11"><b class="font-black text-4xl">Requirement for renting Gadgets</b>  we are here to respond to all you questions</p>
-        <button class="flex gap-5 justify-center items-center text-lg font-semibold tracking-[0.6px] py-4 px-11 bg-white text-purple rounded-lg">
-            <div class="bg-purple rounded-full py-[10px] px-[14px]">
+        <p class="w-[80%] text-white text-center text-2xl font-semibold tracking-wide mb-11"><b class="font-black text-4xl">Requirement for renting Gadgets</b>  we are here to respond to all you questions</p>
+        <button class="flex gap-5 justify-center items-center text-lg font-semibold tracking-[0.6px] py-4 px-11 bg-white text-walure-pink-300 rounded-lg">
+            <div class="bg-walure-pink-300 rounded-full py-[10px] px-[14px]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27" fill="none">
                     <path d="M2.05479 7.68994C1.67279 5.17394 3.44679 2.91394 6.15679 2.08594C6.6377 1.93891 7.15658 1.98076 7.6077 2.20298C8.05883 2.4252 8.40826 2.81106 8.58479 3.28194L9.45479 5.60194C9.59484 5.97517 9.62017 6.38173 9.52751 6.76946C9.43486 7.15718 9.22845 7.50836 8.93479 7.77794L6.34679 10.1479C6.21922 10.265 6.12416 10.4131 6.07089 10.5779C6.01761 10.7426 6.00793 10.9183 6.04279 11.0879L6.06679 11.1919L6.12879 11.4519C6.45064 12.7152 6.94104 13.9295 7.58679 15.0619C8.29021 16.2653 9.16316 17.3612 10.1788 18.3159L10.2588 18.3879C10.388 18.5026 10.5447 18.5819 10.7136 18.618C10.8826 18.6541 11.058 18.6458 11.2228 18.5939L14.5688 17.5399C14.949 17.4206 15.3563 17.4175 15.7383 17.5312C16.1203 17.6449 16.4597 17.8701 16.7128 18.1779L18.2968 20.0999C18.9568 20.8999 18.8768 22.0759 18.1188 22.7819C16.0448 24.7159 13.1928 25.1119 11.2088 23.5179C8.77684 21.5563 6.7267 19.1637 5.16079 16.4599C3.58217 13.7582 2.52971 10.7828 2.05479 7.68994ZM8.14079 11.2199L10.2848 9.25194C10.8725 8.71302 11.2857 8.01075 11.4713 7.23529C11.657 6.45984 11.6067 5.64659 11.3268 4.89994L10.4588 2.57994C10.1035 1.63244 9.40025 0.856065 8.49242 0.409022C7.58458 -0.0380206 6.54045 -0.12209 5.57279 0.173945C2.20679 1.20394 -0.495212 4.22194 0.0767881 7.99194C0.476788 10.6239 1.39879 13.9719 3.43279 17.4679C5.12221 20.3833 7.3337 22.963 9.95679 25.0779C12.9328 27.4679 16.9048 26.6519 19.4848 24.2479C20.223 23.5606 20.6711 22.6174 20.7376 21.6109C20.8042 20.6044 20.4841 19.6105 19.8428 18.8319L18.2588 16.9079C17.7521 16.2929 17.0732 15.8432 16.3092 15.6166C15.5452 15.39 14.7309 15.3967 13.9708 15.6359L11.1928 16.5099C10.4755 15.7704 9.84726 14.9495 9.32079 14.0639C8.81223 13.1687 8.41592 12.2141 8.14079 11.2219V11.2199Z" fill="white"/>
                 </svg>
@@ -290,7 +344,7 @@
             
             audiogadgetTab.addEventListener("click", () => adSpace.classList.add('hidden'));
             cameragadgeTab.addEventListener("click", () => adSpace.classList.remove('hidden'));
-            studiospaceTabb.addEventListener("click", () => adSpace.classList.add('hidden'));
+            studiospaceTab.addEventListener("click", () => adSpace.classList.add('hidden'));
             ledBillboardTab.addEventListener("click", () => adSpace.classList.remove('hidden'));
         </script>
     

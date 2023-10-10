@@ -3,3 +3,205 @@
 @tailwind utilities;
  
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #333333;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-walure-green: 115, 96%, 29.6%;  /* #0F9403 */
+  --color-walure-lime-green: 180, 100%, 32.5%;  /* #00A6A6 */
+  --color-walure-dark-green: 180, 97.4%, 14.9%;  /* #014B4B */
+
+  --color-walure-purple: 258.8, 63.3%, 59.4%;  /* #7F56D9 */
+
+  --color-walure-pink-100: 302.7, 34.4%, 87.5%;  /* #EAD4E9 */
+  --color-walure-pink-200: 306.1, 94.7%, 63.1%;  /* #FA48E8 */
+  --color-walure-pink-300: 304.4, 56.7%, 38%;  /* #982A90 */
+  --color-walure-pink-400: 300, 56.7%, 38%;  /* #982A98 */
+  --color-walure-pink-500: 304.1, 34.6%, 58.6%; /* #BA71B5 */
+
+  --color-walure-red: 345.7, 92.7%, 48%;  /* #EC093F */
+
+  --color-walure-yellow-100: 43.4, 100%, 76.7%;  /* #FFDE88 */
+  --color-walure-yellow-200: 43.2, 100%, 51%;  /* #FFB905 */
+
+  --color-walure-blue-100: 202.7, 58.7%, 87.6%;  /* #CDE4F2 */
+  --color-walure-blue-200: 202.8, 92.9%, 38.8%;  /* #0779BF */
+  --color-walure-blue-700: 223.3, 31.9%, 26.5%; /* #2E3A59 */
+
+  --color-walure-shade-100: 221.5, 100%, 97.5%;  /* #F2F6FF */
+  --color-walure-shade-200: 0, 0%, 94.9%;  /* #F2F2F2 */
+  --color-walure-shade-300: 0, 0%, 87.8%;  /* #E0E0E0 */
+  --color-walure-shade-400: 220.4, 44.1%, 76.9%;  /* #AABBDE */
+  --color-walure-shade-500: 221.4, 22.1%, 62.7%;  /* #8B98B5 */
+  --color-walure-shade-600: 220.6, 13.2%, 46.1%;  /* #667085 */
+  --color-walure-shade-700: 240, 5.2%, 33.9%;  /* #52525B */
+  --color-walure-shade-800: 220, 42.9%, 11%;  /* #101828 */
+  --color-walure-shade-900: 240, 5.9%, 10%; /* #18181B */
+
+  --color-walure-black-100: 0, 0%, 25.9%; /* #424242 */
+
+  --color-walure-gray-500: 217.8, 15.1%, 64.9%; /* #98A2B3 */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+h1 {
+  @apply text-[88px] font-black;
+}
+
+h2 {
+  @apply text-[58px] font-black;
+}
+
+h3 {
+  @apply text-[44px] font-bold;
+}
+
+h4 {
+  @apply text-[38px] font-bold;
+}
+
+/* h5 {
+  @apply text-[88px] font-black;
+}
+
+h6 {
+  @apply text-[58px] font-black;
+} */
+
+.service-heading {
+  @apply text-[44px] tracking-[1.32px];
+}
+
+.service-faq-heading {
+  @apply text-[33px] font-semibold leading-10 tracking-[-0.66px];
+}
+
+.service-title {
+  @apply text-[22px] font-semibold leading-7 tracking-[1.77px];
+}
+
+.product-heading {
+  @apply font-bold leading-7;
+}
+
+.product-h1 {
+  @apply text-[58px] tracking-[2.15px] product-heading;
+}
+
+.product-h2 {
+  @apply text-[32px] tracking-[2.56px] product-heading;
+}
+
+.product-h3 {
+  @apply text-[29px] tracking-[2.36px] product-heading;
+}
+
+.consulting-heading {
+  @apply text-[29px] font-bold;
+}
+
+.consulting-h1 {
+  @apply consulting-heading tracking-[2.95px];
+}
+
+.consulting-h2 {
+  @apply consulting-heading leading-[43px];
+}
+
+.outsourcing-h1 {
+  @apply text-[38px] font-black;
+}
+
+.outsourcing-curve-heading {
+  @apply text-[22px] font-semibold leading-7;
+}
+
+.career-heading {
+  @apply text-[29px] font-bold;
+}
+
+.career-h1 {
+  @apply career-heading leading-[43px];
+}
+
+.career-h2 {
+  @apply text-[20px] font-bold leading-7;
+}
+
+.course-heading {
+  @apply text-[29px] font-bold;
+}
+
+.course-h1 {
+  @apply course-heading tracking-[2.95px];
+}
+
+.course-h2 {
+  @apply course-heading leading-[43px];
+}
+
+.btn-hero {
+  @apply text-sm leading-6 font-semibold rounded-lg tracking-[0.4px] py-4 w-[360px] shadow-sm hover:shadow-lg transition-all duration-300;
+}
+
+.btn1 {
+  @apply text-[13px] leading-6 font-semibold rounded-lg tracking-[0.4px] py-[14px] px-14 shadow-sm hover:shadow-lg transition-all duration-300;
+}
+
+.btn2 {
+  @apply text-[13px] leading-6 font-medium rounded-lg tracking-[0.4px] py-3 px-11 shadow-sm hover:shadow-lg transition-all duration-300;
+}
+
+.btn-text1 {
+  @apply text-[22px] font-bold leading-6 rounded-lg w-[204px] h-[85px] shadow-sm hover:shadow-lg transition-all duration-300;
+}
+
+.btn-text2 {
+  @apply text-[22px] font-bold leading-7 transition-all ease-in duration-300;
+}
+
+.error {
+  @apply absolute top-[70px] text-xs text-red-500;
+}
+
+.padx-body {
+  @apply px-[113px]
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #333333;
+    background-color: #F6F9F9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #F6F9F9;
+    background-color: #333333;
+  }
+} */

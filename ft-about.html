@@ -1,57 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="./src/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                purple: ' #982A90',
-                lilac: '#F8F3FF',
-                pink: '#FA48E8',
-                lightpurple: '#AE2EA5',
-                angularpeach: '#FCE3E4',
-                reactBlue: '#7DE1FC',
-                blazorpurple: '#702AF7',
-                vueGreen: '#41B883',
-                cream: '#Fef4db',
-                navyBlue: '#2E3A59',
-                skyBlue: '#F4F7FB',
-                yellow: ' #FFDE88',
-                blue: '#CDE4F2',
-                purple2: '#7F56D9',
-                gray6: '#F2F2F2',
-                gray5: '#E0E0E0',
-                green: '#0F9403',
-                red: '#EC093F',
-                limeGreen: '#00A6A6',
-                yellow500: '#FFB905',
-                purple200: '#EAD4E9',
-                walureGreen: '#014B4B',
-                iposBlue: '#0779BF',
-                walureGray5: '#98A2B3',
-                text600: '#52525B',
-                text500: '#667085',
-                text400: ' #8B98B5',
-                text300: '#AABBDE',
-                text200: '#E0EAFF',
-                text100: '#F2F6FF',
-                text900: '#101828'
-              },
-              fontFamily: {
-              Montserrat: ['Montserrat', 'sans-serif'],
-              Inter: ['Inter', 'sans-serif'],
-              Jakarta: ['Plus Jakarta Sans', 'sans-serif'],
-              },
-            }
-          },
+            theme: {
+                extend: {
+                    colors: {
+                        'walure-green': withOpacity('--color-walure-green'),
+                        'walure-lime-green': withOpacity('--color-walure-lime-green'),
+                        'walure-dark-green': withOpacity('--color-walure-dark-green'),
+                        'walure-purple': withOpacity('--color-walure-purple'),
+                        'walure-pink-100': withOpacity('--color-walure-pink-100'),
+                        'walure-pink-200': withOpacity('--color-walure-pink-200'),
+                        'walure-pink-300': withOpacity('--color-walure-pink-300'),
+                        'walure-pink-400': withOpacity('--color-walure-pink-400'),
+                        'walure-pink-500': withOpacity('--color-walure-pink-500'),
+                        'walure-yellow-100': withOpacity('--color-walure-yellow-100'),
+                        'walure-yellow-200': withOpacity('--color-walure-yellow-200'),
+                        'walure-blue-100': withOpacity('--color-walure-blue-100'),
+                        'walure-blue-200': withOpacity('--color-walure-blue-200'),
+                        'walure-blue-700': withOpacity('--color-walure-blue-700'),
+                        'walure-red': withOpacity('--color-walure-red'),
+                        'walure-shade-100': withOpacity('--color-walure-shade-100'),
+                        'walure-shade-200': withOpacity('--color-walure-shade-200'),
+                        'walure-shade-300': withOpacity('--color-walure-shade-300'),
+                        'walure-shade-400': withOpacity('--color-walure-shade-400'),
+                        'walure-shade-500': withOpacity('--color-walure-shade-500'),
+                        'walure-shade-600': withOpacity('--color-walure-shade-600'),
+                        'walure-shade-700': withOpacity('--color-walure-shade-700'),
+                        'walure-shade-800': withOpacity('--color-walure-shade-800'),
+                        'walure-shade-900': withOpacity('--color-walure-shade-900'),
+                        'walure-dark-green': withOpacity('--color-walure-dark-green'),
+                        'walure-job-blue': withOpacity('--color-walure-job-blue'),
+                        'walure-job-purple': withOpacity('--color-walure-job-purple'),
+                        'walure-black-100': withOpacity('--color-walure-black-100'),
+                        'walure-gray-500': withOpacity('--color-walure-gray-500'),
+                    },
+                    fontFamily: {
+                        Montserrat: ['Montserrat', 'sans-serif'],
+                        Inter: ['Inter', 'sans-serif'],
+                        Jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    keyframes: {
+                        hover: {
+                            '0%': { transform: 'translateY(0)' },
+                            '30%': { transform: 'translateY(-20px)' },
+                            '60%': { transform: 'translateY(0)' },
+                            '90%': { transform: 'translateY(20px)' },
+                        },
+                        hoverIcon: {
+                            '0%': { transform: 'translateY(0)' },
+                            '30%': { transform: 'translateY(-2px)' },
+                            '60%': { transform: 'translateY(0)' },
+                            '90%': { transform: 'translateY(2px)' },
+                        },
+                        wave: {
+                            '0%': { transform: 'rotate(0.0deg)' },
+                            '10%': { transform: 'rotate(14deg)' },
+                            '20%': { transform: 'rotate(-8deg)' },
+                            '30%': { transform: 'rotate(14deg)' },
+                            '40%': { transform: 'rotate(-4deg)' },
+                            '50%': { transform: 'rotate(10.0deg)' },
+                            '60%': { transform: 'rotate(0.0deg)' },
+                            '100%': { transform: 'rotate(0.0deg)' },
+                        },
+                        flyIn: {
+                            '0%': { transform: 'translateY(40px)' },
+                            '50%': { transform: 'translateY(0)' },
+                        },
+                        flyOut: {
+                            '0%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    },
+                    animation: {
+                        hover: 'hover 1.5s linear infinite',
+                        hoverIcon: 'hoverIcon 1s linear infinite',
+                        wave: 'wave 2s linear infinite',
+                        flyIn: 'flyIn 0.1s linear',
+                        flyOut: 'flyOut 0.1s linear',
+                    }
+                },
+            },
         }
     </script>
 </head>
+
 <body>
     <!-- hero-section -->
     <!-- <div class="grid grid-cols-2">
@@ -70,24 +110,26 @@
     <!-- end of hero-section -->
     <!-- mission/vision -->
     <div class="grid grid-cols-2 mt-[250px] bg-gray-50">
-       <div class="flex items-center justify-center" style="background-image: url(images/Vector\ 1.png);">
-        <div class="">
-            <img src="images/walure logo.png" alt="" class="">
-        </div>
-        <!-- <div class="flex place-content-center">
+        <div class="flex items-center justify-center" style="background-image: url(images/Vector\ 1.png);">
+            <div class="">
+                <img src="images/walure logo.png" alt="" class="">
+            </div>
+            <!-- <div class="flex place-content-center">
             <img src="./images/Vector 1.png" alt="" class="" />
             <img src="./images/" alt="" class="" />
         </div> -->
-       </div>
+        </div>
         <div class="my-[117px] ml-[117px] mr-[127px]">
-           <div class="mb-10">
-            <h3 class="text-black text-4xl font-bold mb-5">Our Mission</h3>
-            <p class="text-text400 text-2xl leading-[52px] pb-[93px] w-[71%]">To empower people with access to rare opportunity in tech.</p>
-           </div>
-           <div>
-            <h3 class="text-black text-4xl font-bold mb-5">Our Vision</h3>
-            <p class="text-text400 text-2xl leading-[52px] pb-[93px]">To be the leading tech talent provider from Nigeria.</p>
-           </div>
+            <div class="mb-10">
+                <h3 class="text-black text-4xl font-bold mb-5">Our Mission</h3>
+                <p class="text-walure-shade-600 text-2xl leading-[52px] pb-[93px] w-[71%]">To empower people with access to rare
+                    opportunity in tech.</p>
+            </div>
+            <div>
+                <h3 class="text-black text-4xl font-bold mb-5">Our Vision</h3>
+                <p class="text-walure-shade-600 text-2xl leading-[52px] pb-[93px]">To be the leading tech talent provider from
+                    Nigeria.</p>
+            </div>
         </div>
     </div>
     <!-- end of mission/vision -->
@@ -100,10 +142,12 @@
                 <div class="grid items-center justify-center">
                     <img src="images/Walure-human-side-by-side.png" alt="" class="shrink-0">
                 </div>
-                <div class="bg-white shadow w-full rounded-xl pt-[107px] pb-[165px] px-10">
+                <div class="bg-white shadow w-full rounded-xl pt-[107px] pb-[135px] px-10">
                     <h4 class="pb-10 text-2xl text-navyBlue text-center font-bold">Passion</h4>
-                    <p class="text-text500 text-xl">Passion drives us at Walure Capital. It fuels our creativity, innovation, and success. 
-                        With passion as our core value, we are committed to delivering exceptional services and empowering dreams.
+                    <p class="text-text500 text-xl">Passion drives us at Walure Capital. It fuels our creativity,
+                        innovation, and success.
+                        With passion as our core value, we are committed to delivering exceptional services and
+                        empowering dreams.
                     </p>
                 </div>
             </div>
@@ -114,8 +158,10 @@
                 </div>
                 <div class="bg-white shadow w-full rounded-xl pt-[107px] pb-[135px] px-10">
                     <h4 class="pb-10 text-2xl text-navyBlue text-center font-bold">Integrity</h4>
-                    <p class="text-text500 text-xl">Integrity is at the heart of Walure Capital. We believe in transparency, honesty, and doing what's right. 
-                        With integrity as a guiding principle, we build trust and foster strong relationships with our clients and partners.
+                    <p class="text-text500 text-xl">Integrity is at the heart of Walure Capital. We believe in
+                        transparency, honesty, and doing what's right.
+                        With integrity as a guiding principle, we build trust and foster strong relationships with our
+                        clients and partners.
                     </p>
                 </div>
             </div>
@@ -126,7 +172,8 @@
                 </div>
                 <div class="bg-white shadow w-full rounded-xl pt-[107px] pb-[135px] px-10">
                     <h4 class="pb-10 text-2xl text-navyBlue text-center font-bold">Excellence</h4>
-                    <p class="text-text500 text-xl">Excellence is the cornerstone of Walure Capital. We strive for nothing less than exceptional quality in everything we do. 
+                    <p class="text-text500 text-xl">Excellence is the cornerstone of Walure Capital. We strive for
+                        nothing less than exceptional quality in everything we do.
                         From our services to our client relationships, we go above and beyond to deliver excellence.
                     </p>
                 </div>
@@ -137,7 +184,7 @@
     <!-- meet-our-team -->
     <h3 class="text-center text-black text-4xl font-bold pb-[68px]">Meet our team</h3>
     <div class="grid grid-cols-3 gap-10 mb-[95px] mx-[138px]">
-        <div class="grid justify-items-center rounded bg-skyBlue p-[30px]">
+        <div class="grid justify-items-center rounded bg-slate-100 p-[30px]">
             <img src="images/Avatar.png" alt="" class="mb-6">
             <p class="text-gray-900 text-2xl font-medium">Samuel Adeleye</p>
             <p class="mb-5 text-lg text-lightpurple">CTO</p>
@@ -146,7 +193,7 @@
                 <img src="images/walure-linkedin.png" alt="">
             </div>
         </div>
-        <div class="grid justify-items-center rounded bg-skyBlue p-[30px]">
+        <div class="grid justify-items-center rounded bg-slate-100 p-[30px]">
             <img src="images/WhatsApp Image 2022-07-27 at 8.30 1.png" alt="" class="mb-6">
             <p class="text-gray-900 text-2xl font-medium">Obafemi Okunbanjo</p>
             <p class="mb-5 text-lg text-lightpurple">General Manager</p>
@@ -155,7 +202,7 @@
                 <img src="images/walure-linkedin.png" alt="">
             </div>
         </div>
-        <div class="grid justify-items-center rounded bg-skyBlue p-[30px]">
+        <div class="grid justify-items-center rounded bg-slate-100 p-[30px]">
             <img src="images/DSC00909 2.png" alt="" class="rounded-full mb-6">
             <p class="text-gray-900 text-2xl font-medium">Gabriel kolawole</p>
             <p class="text-lg text-lightpurple">Agile Delivery Manager</p>
@@ -167,7 +214,7 @@
         </div>
     </div>
     <div class="grid grid-cols-2 gap-10 mb-[95px] mx-[138px]">
-        <div class="grid justify-items-center rounded bg-skyBlue p-[30px]">
+        <div class="grid justify-items-center rounded bg-slate-100 p-[30px]">
             <img src="images/Rectangle.png" alt="" class="rounded-full mb-6">
             <p class="text-gray-900 text-2xl font-medium">Odey Godwin</p>
             <p class="mb-5 text-lg text-lightpurple">Finance Manager</p>
@@ -176,7 +223,7 @@
                 <img src="images/walure-linkedin.png" alt="">
             </div>
         </div>
-        <div class="grid justify-items-center rounded bg-skyBlue p-[30px]">
+        <div class="grid justify-items-center rounded bg-slate-100 p-[30px]">
             <img src="images/Avatar (1).png" alt="" class="mb-6">
             <p class="text-gray-900 text-2xl font-medium">Sarah Essien</p>
             <p class="mb-5 text-lg text-lightpurple">Human Resource Manager</p>
@@ -186,7 +233,8 @@
             </div>
         </div>
     </div>
-     <!-- meet-our-team -->
+    <!-- meet-our-team -->
     <!-- frequently-asked-questions -->
 </body>
+
 </html>
